@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xunit;
-using listing.Controllers;
-using MyTested.AspNetCore.Mvc;
 using Listing.Controllers;
-using Listing.Model;
 using Listing.ViewModel;
 using ListingTest.Mocks;
 using Moq;
