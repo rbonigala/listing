@@ -1,6 +1,7 @@
-﻿using Listing.Model;
+﻿using Listing.Constants;
 using Listing.ViewModel;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,12 +14,12 @@ namespace Listing.Services
     public class PetService : IPetService
     {
         static readonly HttpClient client = new HttpClient();
-        private readonly IHttpClientFactory _clientFactory;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<PetService> _logger;
 
-        public PetService(IConfiguration configuration)
+        public PetService(IConfiguration configuration, ILogger<PetService> logger)
         {
-            //_clientFactory = clientFactory;
+            _logger = logger;
             _configuration = configuration;
         }
 
@@ -28,15 +29,18 @@ namespace Listing.Services
 
             try
             {
+                _logger.LogDebug("Reading the Uri from the appsettings file");
                 uri = _configuration["AppSettings:PetsDataUri"];
             }
-            catch(Exception e)
+            catch(Exception ex)
             {
+                _logger.LogError(ErrorMessages.CONFIG_READING);
                 throw new Exception("Uri Missing in the configuration");
             }
             List<PetViewModel> petViewModelList = new List<PetViewModel>();
             try
             {
+                _logger.LogInformation("Reading data from the {datauri}", uri);
                 string responseBody = await client.GetStringAsync(uri);
 
                 var data = JsonConvert.DeserializeObject<List<PetDataModel>>(responseBody);

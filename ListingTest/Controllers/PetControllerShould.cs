@@ -6,6 +6,7 @@ using ListingTest.Mocks;
 using Moq;
 using Listing.Services;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace ListingTest
 {
@@ -15,9 +16,10 @@ namespace ListingTest
         public void ReturnResultWithCorrectModelWhenCallingAction()
         {
             Mock<IPetService> petServiceMock = new Mock<IPetService>();
+            Mock<ILogger<PetController>> petControllerLoggerMock = new Mock<ILogger<PetController>>();
             petServiceMock.Setup(m => m.GetPets()).Returns(
                 Task.FromResult( MockProvider.PetViewModelMock));
-            PetController petController = new PetController(petServiceMock.Object);
+            PetController petController = new PetController(petServiceMock.Object, petControllerLoggerMock.Object);
 
             var result = petController.Get();
 

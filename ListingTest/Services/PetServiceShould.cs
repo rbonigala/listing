@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MyTested.AspNetCore.Mvc;
-using Listing.Controllers;
-using Listing.Model;
 using Xunit;
-using System.Net.Http;
 using Moq;
 using Listing.Services;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace ListingTest
 {
@@ -20,7 +15,8 @@ namespace ListingTest
         {
             Mock<IConfiguration> _configuration = new Mock<IConfiguration>();
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:InvalidAppSetting")]).Returns("http://localhost:6000/Valid");
-            PetService petService = new PetService(_configuration.Object);            
+            Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
+            PetService petService = new PetService(_configuration.Object, mockLogger.Object);            
             Assert.ThrowsAsync<Exception>(() => petService.GetPets());
         }
 
@@ -29,7 +25,8 @@ namespace ListingTest
         {
             Mock<IConfiguration> _configuration = new Mock<IConfiguration>();
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/Valid");
-            PetService petService = new PetService(_configuration.Object);
+            Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
+            PetService petService = new PetService(_configuration.Object, mockLogger.Object);
             var pets = await petService.GetPets();
         }
 
@@ -38,7 +35,8 @@ namespace ListingTest
         {
             Mock<IConfiguration> _configuration = new Mock<IConfiguration>();
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/SingleMale");
-            PetService petService = new PetService(_configuration.Object);
+            Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
+            PetService petService = new PetService(_configuration.Object, mockLogger.Object);
             var pets = await petService.GetPets();
             Assert.Single(pets);
             Assert.Single(pets.ToList()[0].Names);
@@ -49,7 +47,8 @@ namespace ListingTest
         {
             Mock<IConfiguration> _configuration = new Mock<IConfiguration>();
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/SingleMaleNoPets");
-            PetService petService = new PetService(_configuration.Object);
+            Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
+            PetService petService = new PetService(_configuration.Object, mockLogger.Object);
             var pets = await petService.GetPets();
             Assert.Empty(pets);
         }
@@ -59,7 +58,8 @@ namespace ListingTest
         {
             Mock<IConfiguration> _configuration = new Mock<IConfiguration>();
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/SingleMaleSingleDog");
-            PetService petService = new PetService(_configuration.Object);
+            Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
+            PetService petService = new PetService(_configuration.Object, mockLogger.Object);
             var pets = await petService.GetPets();
             Assert.Empty(pets);
         }

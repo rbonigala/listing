@@ -16,11 +16,6 @@ namespace ListingTest.Mocks
                 pet1.Name = "abc";
                 pet1.Type = "Cat";
 
-                PetCarer petCarer1 = new PetCarer();
-                petCarer1.Name = "xyz";
-                petCarer1.age = 30;
-                petCarer1.Gender = "female";
-
                 PetViewModel petViewModel1 = new PetViewModel();
 
                 petViewModel1.Gender = "female";
