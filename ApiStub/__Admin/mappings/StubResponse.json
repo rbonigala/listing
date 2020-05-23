@@ -1,0 +1,21 @@
+{
+  "Request": {
+    "Url": {
+      "Matchers": [
+        {
+          "Name": "Basic",
+          "Pattern": "/people.json"
+        }
+      ]
+    },
+    "Methods": [ "get" ]
+  },
+  "Response": {
+    "BodyAsJson": {
+      "searchResults": [
+        { "link": "http://example.com" }
+      ]
+    },
+    "Headers": { "Content-Type": "application/json" }
+  }
+}
