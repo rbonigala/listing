@@ -23,10 +23,7 @@ export class CarerPetData extends Component {
   }
 
   render() {
-    //let contents = this.state.loading
-    //  ? <p><em>Loading...</em></p>
-    //    : CarerPetData.renderCarerandpetsTable(this.state.carerandpets);
-
+    
       let contents = this.state.isError
             ? <p>Service unavilable, please visit after sometime</p> : this.state.loading
           ? <p><em>Loading...</em></p>
@@ -41,9 +38,9 @@ export class CarerPetData extends Component {
   }
 
     async populateCarerandpetsData() {
-        const response = await fetch('api/pet');
+        const response = await fetch('api/pet?petType=cat');
         console.log(`response status: ${response.status}`);
-        if (response.status != 200) {
+        if (response.status !== 200) {
             this.setState({ isError: true });
         }
         else {

@@ -211,65 +211,84 @@
       "Listing.Services.PetService": {
         "System.Void Listing.Services.PetService::.ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger`1<Listing.Services.PetService>)": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "20": 5,
+            "21": 5,
+            "22": 5,
+            "23": 5,
+            "24": 5
           },
           "Branches": []
         },
         "System.Void Listing.Services.PetService::.cctor()": {
           "Lines": {
-            "16": 0
+            "16": 1
           },
           "Branches": []
+        }
+      },
+      "Listing.Services.PetService/<>c__DisplayClass4_0": {
+        "System.Boolean Listing.Services.PetService/<>c__DisplayClass4_0::<GetPets>b__3(<>f__AnonymousType0`2<Listing.ViewModel.PetDataModel,Listing.Model.Pet>)": {
+          "Lines": {
+            "44": 17
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 11,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 13
+            }
+          ]
         }
       },
       "Listing.Services.PetService/<>c": {
         "System.Boolean Listing.Services.PetService/<>c::<GetPets>b__4_0(Listing.ViewModel.PetDataModel)": {
           "Lines": {
-            "42": 0
+            "42": 13
           },
           "Branches": []
         },
         "System.Collections.Generic.IEnumerable`1<Listing.Model.Pet> Listing.Services.PetService/<>c::<GetPets>b__4_1(Listing.ViewModel.PetDataModel)": {
           "Lines": {
-            "43": 0
-          },
-          "Branches": []
-        },
-        "System.Boolean Listing.Services.PetService/<>c::<GetPets>b__4_3(<>f__AnonymousType0`2<Listing.ViewModel.PetDataModel,Listing.Model.Pet>)": {
-          "Lines": {
-            "44": 0
+            "43": 25
           },
           "Branches": []
         },
         "<>f__AnonymousType1`2<System.String,Listing.Model.Pet> Listing.Services.PetService/<>c::<GetPets>b__4_4(<>f__AnonymousType0`2<Listing.ViewModel.PetDataModel,Listing.Model.Pet>)": {
           "Lines": {
-            "45": 0
+            "45": 17
           },
           "Branches": []
         },
         "System.String Listing.Services.PetService/<>c::<GetPets>b__4_5(<>f__AnonymousType1`2<System.String,Listing.Model.Pet>)": {
           "Lines": {
-            "48": 0
+            "48": 17
           },
           "Branches": []
         },
         "Listing.Model.Pet Listing.Services.PetService/<>c::<GetPets>b__4_6(<>f__AnonymousType1`2<System.String,Listing.Model.Pet>)": {
           "Lines": {
-            "49": 0
+            "49": 17
           },
           "Branches": []
         },
         "Listing.ViewModel.PetViewModel Listing.Services.PetService/<>c::<GetPets>b__4_7(System.String,System.Collections.Generic.IEnumerable`1<Listing.Model.Pet>)": {
           "Lines": {
-            "50": 0,
-            "51": 0,
-            "52": 0,
-            "53": 0,
-            "54": 0
+            "50": 8,
+            "51": 8,
+            "52": 8,
+            "53": 21,
+            "54": 8
           },
           "Branches": []
         }
@@ -277,18 +296,18 @@
       "Listing.Services.PetService/<GetPets>d__4": {
         "System.Void Listing.Services.PetService/<GetPets>d__4::MoveNext()": {
           "Lines": {
-            "27": 0,
-            "31": 0,
-            "32": 0,
-            "34": 0,
-            "35": 0,
-            "36": 0,
-            "38": 0,
-            "39": 0,
-            "41": 0,
-            "47": 0,
-            "56": 0,
-            "57": 0
+            "27": 5,
+            "31": 5,
+            "32": 5,
+            "34": 5,
+            "35": 5,
+            "36": 5,
+            "38": 4,
+            "39": 4,
+            "41": 4,
+            "47": 4,
+            "56": 4,
+            "57": 4
           },
           "Branches": []
         }
@@ -304,7 +323,7 @@
         },
         "System.String Listing.ViewModel.PetDataModel::get_Gender()": {
           "Lines": {
-            "14": 0
+            "14": 22
           },
           "Branches": []
         },
@@ -316,7 +335,7 @@
         },
         "System.Collections.Generic.List`1<Listing.Model.Pet> Listing.ViewModel.PetDataModel::get_Pets()": {
           "Lines": {
-            "18": 0
+            "18": 34
           },
           "Branches": []
         }
@@ -326,13 +345,13 @@
       "Listing.ViewModel.PetViewModel": {
         "System.String Listing.ViewModel.PetViewModel::get_Gender()": {
           "Lines": {
-            "10": 0
+            "10": 6
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> Listing.ViewModel.PetViewModel::get_Names()": {
           "Lines": {
-            "12": 0
+            "12": 7
           },
           "Branches": []
         }
@@ -372,7 +391,7 @@
         },
         "System.String Listing.Model.Pet::get_Name()": {
           "Lines": {
-            "11": 0
+            "11": 27
           },
           "Branches": []
         },
@@ -438,11 +457,11 @@
       "Listing.Controllers.PetController": {
         "System.Void Listing.Controllers.PetController::.ctor(Listing.Services.IPetService,Microsoft.Extensions.Logging.ILogger`1<Listing.Controllers.PetController>)": {
           "Lines": {
-            "20": 0,
-            "21": 0,
-            "22": 0,
-            "23": 0,
-            "24": 0
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1
           },
           "Branches": []
         }
@@ -450,11 +469,11 @@
       "Listing.Controllers.PetController/<Get>d__3": {
         "System.Void Listing.Controllers.PetController/<Get>d__3::MoveNext()": {
           "Lines": {
-            "29": 0,
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1
           },
           "Branches": []
         }

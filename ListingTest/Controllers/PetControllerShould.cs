@@ -17,7 +17,7 @@ namespace ListingTest
         {
             Mock<IPetService> petServiceMock = new Mock<IPetService>();
             Mock<ILogger<PetController>> petControllerLoggerMock = new Mock<ILogger<PetController>>();
-            petServiceMock.Setup(m => m.GetPets()).Returns(
+            petServiceMock.Setup(m => m.GetPets(It.IsAny<string>())).Returns(
                 Task.FromResult( MockProvider.PetViewModelMock));
             PetController petController = new PetController(petServiceMock.Object, petControllerLoggerMock.Object);
 

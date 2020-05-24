@@ -37,7 +37,7 @@ namespace ListingTest
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/SingleMale");
             Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
             PetService petService = new PetService(_configuration.Object, mockLogger.Object);
-            var pets = await petService.GetPets();
+            var pets = await petService.GetPets("cat");
             Assert.Single(pets);
             Assert.Single(pets.ToList()[0].Names);
         }
@@ -60,7 +60,7 @@ namespace ListingTest
             _configuration.SetupGet(x => x[It.Is<string>(s => s == "AppSettings:PetsDataUri")]).Returns("http://localhost:6000/SingleMaleSingleDog");
             Mock<ILogger<PetService>> mockLogger = new Mock<ILogger<PetService>>();
             PetService petService = new PetService(_configuration.Object, mockLogger.Object);
-            var pets = await petService.GetPets();
+            var pets = await petService.GetPets("cat");
             Assert.Empty(pets);
         }
 

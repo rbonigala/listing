@@ -23,7 +23,7 @@ namespace Listing.Services
             _configuration = configuration;
         }
 
-        public async Task<IEnumerable<PetViewModel>> GetPets()
+        public async Task<IEnumerable<PetViewModel>> GetPets(string petType = "")
         {
             string uri;
 
@@ -41,7 +41,7 @@ namespace Listing.Services
             var query = from carerandpet in data
                         where (carerandpet.Pets != null)
                         from pets in carerandpet.Pets
-                        where pets.Type == "Cat"
+                        where string.IsNullOrEmpty(petType) || pets.Type.ToLower() == petType.ToLower()
                         select new { Gender = carerandpet.Gender, Pets = pets };
 
             petViewModelList = query.GroupBy(

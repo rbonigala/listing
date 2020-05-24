@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.2682" branch-rate="0.4736" version="1.9" timestamp="1590303356" lines-covered="44" lines-valid="164" branches-covered="18" branches-valid="38">
+  <sources>
+    <source>C:\Raj\AGLTest\listing\</source>
+  </sources>
+  <packages>
+    <package name="Listing" line-rate="0.2767" branch-rate="0.4736" complexity="70">
+      <classes>
+        <class name="listing.Program" filename="Program.cs" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="Main" signature="(System.String[])" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="CreateHostBuilder" signature="(System.String[])" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="20" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="42" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="20" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="listing.Startup" filename="Startup.cs" line-rate="0" branch-rate="0" complexity="10">
+          <methods>
+            <method name="get_Configuration" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ConfigureServices" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="34" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="49" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="Configure" signature="(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="58" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="63" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="116" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
+                <line number="74" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="31" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="75" hits="0" branch="False" />
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="78" hits="0" branch="False" />
+                <line number="79" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration)" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="34" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="49" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="35" hits="0" branch="False" />
+            <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="27" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="58" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="63" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="116" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="74" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="31" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="75" hits="0" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="78" hits="0" branch="False" />
+            <line number="79" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="listing.Pages.ErrorModel" filename="Pages\Error.cshtml.cs" line-rate="0" branch-rate="0" complexity="7">
+          <methods>
+            <method name="get_RequestId" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_ShowRequestId" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="OnGet" signature="()" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="0%" />
+                    <condition number="20" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="29" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;listing.Pages.ErrorModel&gt;)" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="22" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="8" type="jump" coverage="0%" />
+                <condition number="20" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="29" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Services.PetService" filename="Services\PetService.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name=".ctor" signature="(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger`1&lt;Listing.Services.PetService&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="20" hits="5" branch="False" />
+                <line number="21" hits="5" branch="False" />
+                <line number="22" hits="5" branch="False" />
+                <line number="23" hits="5" branch="False" />
+                <line number="24" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="16" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="5" branch="False" />
+            <line number="21" hits="5" branch="False" />
+            <line number="22" hits="5" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="24" hits="5" branch="False" />
+            <line number="16" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Services.PetService/&lt;&gt;c" filename="Services\PetService.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="&lt;GetPets&gt;b__4_0" signature="(Listing.ViewModel.PetDataModel)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="42" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_1" signature="(Listing.ViewModel.PetDataModel)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="43" hits="25" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_3" signature="(&lt;&gt;f__AnonymousType0`2&lt;Listing.ViewModel.PetDataModel,Listing.Model.Pet&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="44" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_4" signature="(&lt;&gt;f__AnonymousType0`2&lt;Listing.ViewModel.PetDataModel,Listing.Model.Pet&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="45" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_5" signature="(&lt;&gt;f__AnonymousType1`2&lt;System.String,Listing.Model.Pet&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="48" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_6" signature="(&lt;&gt;f__AnonymousType1`2&lt;System.String,Listing.Model.Pet&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="49" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetPets&gt;b__4_7" signature="(System.String,System.Collections.Generic.IEnumerable`1&lt;Listing.Model.Pet&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="50" hits="7" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="21" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="7" branch="False" />
+                <line number="52" hits="7" branch="False" />
+                <line number="53" hits="15" branch="False" />
+                <line number="54" hits="7" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="42" hits="13" branch="False" />
+            <line number="43" hits="25" branch="False" />
+            <line number="44" hits="17" branch="False" />
+            <line number="45" hits="12" branch="False" />
+            <line number="48" hits="12" branch="False" />
+            <line number="49" hits="12" branch="False" />
+            <line number="50" hits="7" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="21" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="51" hits="7" branch="False" />
+            <line number="52" hits="7" branch="False" />
+            <line number="53" hits="15" branch="False" />
+            <line number="54" hits="7" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Services.PetService/&lt;GetPets&gt;d__4" filename="Services\PetService.cs" line-rate="1" branch-rate="1" complexity="16">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="27" hits="5" branch="False" />
+                <line number="31" hits="5" branch="False" />
+                <line number="32" hits="5" branch="False" />
+                <line number="34" hits="5" branch="False" />
+                <line number="35" hits="5" branch="False" />
+                <line number="36" hits="5" branch="False" />
+                <line number="38" hits="4" branch="False" />
+                <line number="39" hits="4" branch="False" />
+                <line number="41" hits="4" branch="True" condition-coverage="100% (10/10)">
+                  <conditions>
+                    <condition number="292" type="jump" coverage="100%" />
+                    <condition number="328" type="jump" coverage="100%" />
+                    <condition number="359" type="jump" coverage="100%" />
+                    <condition number="395" type="jump" coverage="100%" />
+                    <condition number="431" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="4" branch="True" condition-coverage="100% (6/6)">
+                  <conditions>
+                    <condition number="479" type="jump" coverage="100%" />
+                    <condition number="510" type="jump" coverage="100%" />
+                    <condition number="541" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="56" hits="4" branch="False" />
+                <line number="57" hits="4" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="27" hits="5" branch="False" />
+            <line number="31" hits="5" branch="False" />
+            <line number="32" hits="5" branch="False" />
+            <line number="34" hits="5" branch="False" />
+            <line number="35" hits="5" branch="False" />
+            <line number="36" hits="5" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="39" hits="4" branch="False" />
+            <line number="41" hits="4" branch="True" condition-coverage="100% (10/10)">
+              <conditions>
+                <condition number="292" type="jump" coverage="100%" />
+                <condition number="328" type="jump" coverage="100%" />
+                <condition number="359" type="jump" coverage="100%" />
+                <condition number="395" type="jump" coverage="100%" />
+                <condition number="431" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="47" hits="4" branch="True" condition-coverage="100% (6/6)">
+              <conditions>
+                <condition number="479" type="jump" coverage="100%" />
+                <condition number="510" type="jump" coverage="100%" />
+                <condition number="541" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="56" hits="4" branch="False" />
+            <line number="57" hits="4" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.ViewModel.PetDataModel" filename="Model\PetDataModel.cs" line-rate="0.5" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Gender" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="14" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Age" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Pets" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="18" hits="34" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="0" branch="False" />
+            <line number="14" hits="17" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="18" hits="34" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.ViewModel.PetViewModel" filename="ViewModel\PetViewModel.cs" line-rate="0.5" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Gender" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Names" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="12" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="12" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Model.Error" filename="Model\Error.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_StatusCode" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Message" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="ToString" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Model.Pet" filename="Model\Pet.cs" line-rate="0.6666" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="11" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Type" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="13" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="22" branch="False" />
+            <line number="13" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Extensions.CustomExceptionMiddleware" filename="Middlewares\CustomExceptionMiddleware.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="HandleExceptionAsync" signature="(Microsoft.AspNetCore.Http.HttpContext)" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
+                <line number="44" hits="0" branch="False" />
+                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.AspNetCore.Http.RequestDelegate)" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
+            <line number="44" hits="0" branch="False" />
+            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Extensions.CustomExceptionMiddleware/&lt;InvokeAsync&gt;d__3" filename="Middlewares\CustomExceptionMiddleware.cs" line-rate="0" branch-rate="0" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0">
+              <lines>
+                <line number="25" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="14" type="jump" coverage="0%" />
+                    <condition number="35" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="185" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="14" type="jump" coverage="0%" />
+                <condition number="35" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="185" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Controllers.PetController" filename="Controllers\PetController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(Listing.Services.IPetService,Microsoft.Extensions.Logging.ILogger`1&lt;Listing.Controllers.PetController&gt;)" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Controllers.PetController/&lt;Get&gt;d__3" filename="Controllers\PetController.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1">
+              <lines>
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Listing.Constants.ErrorMessages" filename="Constants\ErrorMessages.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".cctor" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Listing.Views" line-rate="0" branch-rate="1" complexity="1">
+      <classes>
+        <class name="listing.Pages.Pages_Error/&lt;ExecuteAsync&gt;d__0" filename="Pages\Error.cshtml" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1">
+              <lines>
+                <line number="4" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

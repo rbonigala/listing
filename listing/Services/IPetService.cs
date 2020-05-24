@@ -8,6 +8,6 @@ namespace Listing.Services
 {
     public interface IPetService
     {
-        Task<IEnumerable<PetViewModel>> GetPets();
+        Task<IEnumerable<PetViewModel>> GetPets(string? petType);
     }
 }

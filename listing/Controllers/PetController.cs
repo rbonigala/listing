@@ -25,10 +25,10 @@ namespace Listing.Controllers
 
 
         [HttpGet]
-        public async Task<IEnumerable<PetViewModel>> Get()
+        public async Task<IEnumerable<PetViewModel>> Get(string petType="")
         {
             IEnumerable<PetViewModel> petCarerList = new List<PetViewModel>();
-            petCarerList = await _petService.GetPets();
+            petCarerList = await _petService.GetPets(petType);
             return petCarerList;
         }
     }
