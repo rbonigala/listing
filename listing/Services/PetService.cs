@@ -1,5 +1,4 @@
-﻿using Listing.Constants;
-using Listing.ViewModel;
+﻿using Listing.ViewModel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -42,7 +41,7 @@ namespace Listing.Services
                         where (carerandpet.Pets != null)
                         from pets in carerandpet.Pets
                         where string.IsNullOrEmpty(petType) || pets.Type.ToLower() == petType.ToLower()
-                        select new { Gender = carerandpet.Gender, Pets = pets };
+                        select new { carerandpet.Gender, Pets = pets };
 
             petViewModelList = query.GroupBy(
                     pet => pet.Gender,

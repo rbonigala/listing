@@ -12,17 +12,16 @@ namespace ListingTest.Mocks
         {
             get
             {
-                Pet pet1 = new Pet();
-                pet1.Name = "abc";
-                pet1.Type = "Cat";
+                PetViewModel petViewModel1 = new PetViewModel
+                {
+                    Gender = "female",
+                    Names = new List<String> { "Garfield" }
+                };
 
-                PetViewModel petViewModel1 = new PetViewModel();
-
-                petViewModel1.Gender = "female";
-                petViewModel1.Names = new List<String> { "Garfield" };
-
-                List<PetViewModel> petViewModelList = new List<PetViewModel>();
-                petViewModelList.Add(petViewModel1);
+                List<PetViewModel> petViewModelList = new List<PetViewModel>
+                {
+                    petViewModel1
+                };
 
                 return petViewModelList;
             }

@@ -1,12 +1,10 @@
 ﻿using Listing.Constants;
 using Listing.Model;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 //using Microsoft.Extensions.Logging;
 using Serilog;
 using System;
 using System.Net;
-using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace Listing.Extensions

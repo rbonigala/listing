@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Listing.Model;
 using Listing.Services;
 using Listing.ViewModel;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -15,8 +11,8 @@ namespace Listing.Controllers
     [ApiController]
     public class PetController : ControllerBase
     {
-        IPetService _petService;
-        ILogger<PetController> _logger;
+        readonly IPetService _petService;
+        readonly ILogger<PetController> _logger;
         public PetController(IPetService petService, ILogger<PetController> logger)
         {
             _petService = petService;
@@ -27,6 +23,7 @@ namespace Listing.Controllers
         [HttpGet]
         public async Task<IEnumerable<PetViewModel>> Get(string petType="")
         {
+            _logger.LogInformation("Processing Request for {typeofpet}", petType);
             IEnumerable<PetViewModel> petCarerList = new List<PetViewModel>();
             petCarerList = await _petService.GetPets(petType);
             return petCarerList;
