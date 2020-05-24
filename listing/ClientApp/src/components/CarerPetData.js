@@ -5,7 +5,7 @@ export class CarerPetData extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { carerandpets: [], loading: true };
+    this.state = { carerandpets: [], loading: true, isError: false };
   }
 
   componentDidMount() {
@@ -23,9 +23,14 @@ export class CarerPetData extends Component {
   }
 
   render() {
-    let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
-        : CarerPetData.renderCarerandpetsTable(this.state.carerandpets);
+    //let contents = this.state.loading
+    //  ? <p><em>Loading...</em></p>
+    //    : CarerPetData.renderCarerandpetsTable(this.state.carerandpets);
+
+      let contents = this.state.isError
+            ? <p>Service unavilable, please visit after sometime</p> : this.state.loading
+          ? <p><em>Loading...</em></p>
+          : CarerPetData.renderCarerandpetsTable(this.state.carerandpets);
 
     return (
       <div>
@@ -36,8 +41,15 @@ export class CarerPetData extends Component {
   }
 
     async populateCarerandpetsData() {
-    const response = await fetch('api/pet');
-    const data = await response.json();
-        this.setState({ carerandpets: data, loading: false });
+        const response = await fetch('api/pet');
+        console.log(`response status: ${response.status}`);
+        if (response.status != 200) {
+            this.setState({ isError: true });
+        }
+        else {
+            const data = await response.json();
+            this.setState({ carerandpets: data, loading: false });
+        }
+    
   }
 }

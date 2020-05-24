@@ -1,3 +1,4 @@
+using Listing.Extensions;
 using Listing.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Serilog;
 
 namespace listing
@@ -25,6 +27,7 @@ namespace listing
             services.AddHttpClient();
             services.AddControllersWithViews();
             services.AddScoped(typeof(IPetService), typeof(PetService));
+            
 
 
             // In production, the React files will be served from this directory
@@ -47,12 +50,14 @@ namespace listing
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
+            
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseSerilogRequestLogging();
-
+            app.UseMiddleware<CustomExceptionMiddleware>();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

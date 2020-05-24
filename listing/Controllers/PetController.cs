@@ -14,7 +14,7 @@ namespace Listing.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class PetController : ControllerBase
-    { 
+    {
         IPetService _petService;
         ILogger<PetController> _logger;
         public PetController(IPetService petService, ILogger<PetController> logger)
@@ -28,15 +28,7 @@ namespace Listing.Controllers
         public async Task<IEnumerable<PetViewModel>> Get()
         {
             IEnumerable<PetViewModel> petCarerList = new List<PetViewModel>();
-            try
-            {   
-                petCarerList = await _petService.GetPets();
-                
-            }
-            catch(Exception ex)
-            {
-                _logger.LogError("An error occurred while fetching pets list", ex);
-            }
+            petCarerList = await _petService.GetPets();
             return petCarerList;
         }
     }

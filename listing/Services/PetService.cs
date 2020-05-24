@@ -27,46 +27,31 @@ namespace Listing.Services
         {
             string uri;
 
-            try
-            {
-                _logger.LogDebug("Reading the Uri from the appsettings file");
-                uri = _configuration["AppSettings:PetsDataUri"];
-            }
-            catch(Exception ex)
-            {
-                _logger.LogError(ErrorMessages.CONFIG_READING);
-                throw new Exception("Uri Missing in the configuration");
-            }
+
+            _logger.LogDebug("Reading the Uri from the appsettings file");
+            uri = _configuration["AppSettings:PetsDataUri"];
+
             List<PetViewModel> petViewModelList = new List<PetViewModel>();
-            try
-            {
-                _logger.LogInformation("Reading data from the {datauri}", uri);
-                string responseBody = await client.GetStringAsync(uri);
+            _logger.LogInformation("Reading data from the {datauri}", uri);
+            string responseBody = await client.GetStringAsync(uri);
 
-                var data = JsonConvert.DeserializeObject<List<PetDataModel>>(responseBody);
-                Console.WriteLine(data);
-                
-                var query = from carerandpet in data
-                            where (carerandpet.Pets != null)
-                            from pets in carerandpet.Pets
-                            where pets.Type == "Cat"
-                            select new { Gender = carerandpet.Gender, Pets = pets };
+            var data = JsonConvert.DeserializeObject<List<PetDataModel>>(responseBody);
+            Console.WriteLine(data);
 
-                petViewModelList = query.GroupBy(
-                        pet => pet.Gender,
-                        pet => pet.Pets,
-                        (gender, pets) => new PetViewModel
-                        {
-                            Gender = gender,
-                            Names = pets.Select(x => x.Name).ToList()
-                        }).ToList();
-                
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
-            
+            var query = from carerandpet in data
+                        where (carerandpet.Pets != null)
+                        from pets in carerandpet.Pets
+                        where pets.Type == "Cat"
+                        select new { Gender = carerandpet.Gender, Pets = pets };
+
+            petViewModelList = query.GroupBy(
+                    pet => pet.Gender,
+                    pet => pet.Pets,
+                    (gender, pets) => new PetViewModel
+                    {
+                        Gender = gender,
+                        Names = pets.Select(x => x.Name).ToList()
+                    }).ToList();
             
             return petViewModelList;
         }
