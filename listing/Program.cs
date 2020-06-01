@@ -20,12 +20,12 @@ namespace listing
 
             try
             {
-                Log.Information("Carers and Pets Listing Application Starting Up");
+                Log.Information("EVUp App Starting");
                 CreateHostBuilder(args).Build().Run();                
             }
             catch (Exception)
             {
-                Log.Fatal("Carers and Pets Listing Application could not Start");
+                Log.Fatal("EVUp Application could not Start");
             }
             finally
             {

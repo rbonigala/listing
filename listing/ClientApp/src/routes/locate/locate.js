@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-
+//import { Marker } from '../../util/marker/marker';
+import '../../util/marker/marker.css'
 const AnyReactComponent = ({ text }) => (<div style={{
     color: 'white',
     background: 'green',
@@ -13,6 +14,10 @@ const AnyReactComponent = ({ text }) => (<div style={{
     transform: 'translate(-50%, -50%)'
 }}>{text}</div>);
 
+const Marker = props => {
+    return <div className="pin"></div>
+}
+
 const axios = require('axios').default;
 
 export default class locate extends Component {
@@ -22,7 +27,7 @@ export default class locate extends Component {
         zoom: 11
     }
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             latitude: null,
@@ -34,10 +39,10 @@ export default class locate extends Component {
         this.getCoordinates = this.getCoordinates.bind(this);
         this.handleLocationError = this.handleLocationError.bind(this);
         this.getChargePoints = this.getChargePoints.bind(this);
-        
+        this.getLocation();
     }
 
-    
+
 
     getLocation() {
         if (navigator.geolocation) {
@@ -55,34 +60,34 @@ export default class locate extends Component {
         console.log(this.state.latitude);
         console.log(this.state.longitude);
         this.getChargePoints();
-        }
-    
+    }
+
 
     handleLocationError(error) {
-    switch (error.code) {
-        case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            alert("The request to get user location timed out.");
-            break;
-        case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
-            break;
-        default:
-            alert("An unknown error occurred.");           
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                alert("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("An unknown error occurred.");
+                break;
+            default:
+                alert("An unknown error occurred.");
+        }
     }
-}
 
     getChargePoints() {
         this.setState({
             charge_locations: [{ "latitude": "-38.027640", "longitude": "145.212350" },
-                { "latitude": "-38.025860", "longitude": "145.203860" },
-                { "latitude": "-38.0098923", "longitude": "145.1060457" },
-                { "latitude": "-37.8632748", "longitude": "145.3528256" }
+            { "latitude": "-38.025860", "longitude": "145.203860" },
+            { "latitude": "-38.0098923", "longitude": "145.1060457" },
+            { "latitude": "-37.8632748", "longitude": "145.3528256" }
             ]
         })
     }
@@ -90,38 +95,29 @@ export default class locate extends Component {
     render() {
         return (
             <div style={{ height: '100vh', width: '100%' }}>
-                <h1>Testing2</h1>
-                <button onClick={this.getLocation}>Get coordinates</button>
-                {   
+                <h1>Charging Stations near you</h1>
+                {
                     this.state.latitude && this.state.longitude && this.state.charge_locations ?
-                        
-                            <GoogleMapReact
+
+                        <GoogleMapReact
                             bootstrapURLKeys={{ key: this.state.google_api_key }}
                             defaultZoom={this.props.zoom}
-                            defaultCenter={this.props.center}
-                                
-                        >
-                            {this.state.charge_locations.map(location => 
-                                <AnyReactComponent
-                                    lat={location.latitude}
-                                    lng={location.longitude}
-                                    text="My Marker"
-                                />
-                            )}
+                            defaultCenter={{lat: this.state.latitude, lng:this.state.longitude}}
 
-                            
-                                
-                            </GoogleMapReact>
-                        
-                        : 
+                        >
+                            {this.state.charge_locations.map(location =>
+                                <Marker lat={location.latitude} lng={location.longitude} />)}
+                        </GoogleMapReact>
+
+                        :
                         <h1>No Coordinates</h1>
                 }
             </div>
-            
+
         );
     }
 
 
-    
+
 }
 

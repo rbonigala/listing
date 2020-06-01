@@ -51,7 +51,7 @@ namespace listing
             }
             
             
-
+            
             
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -75,6 +75,7 @@ namespace listing
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+            
         }
     }
 }

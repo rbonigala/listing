@@ -4,7 +4,8 @@ export class CarerPetData extends Component {
     static displayName = CarerPetData.name;
 
   constructor(props) {
-    super(props);
+
+      (props);
     this.state = { carerandpets: [], loading: true, isError: false };
   }
 
