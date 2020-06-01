@@ -3,8 +3,8 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => (<div style={{
     color: 'white',
-    background: 'grey',
-    padding: '15px 10px',
+    background: 'green',
+    padding: '5px 5px',
     display: 'inline-flex',
     textAlign: 'center',
     alignItems: 'center',
@@ -12,6 +12,8 @@ const AnyReactComponent = ({ text }) => (<div style={{
     borderRadius: '100%',
     transform: 'translate(-50%, -50%)'
 }}>{text}</div>);
+
+const axios = require('axios').default;
 
 export default class locate extends Component {
 
@@ -25,7 +27,8 @@ export default class locate extends Component {
         this.state = {
             latitude: null,
             longitude: null,
-            google_api_key: 'AIzaSyBJwKoxNC5jEYGgC2B0FRfjowg5umG4kCo'            
+            google_api_key: 'AIzaSyAxP2ud0asDGy_dinK5D5KHao-f5bFlerg',
+            charge_locations: []
         };
         this.getLocation = this.getLocation.bind(this);
         this.getCoordinates = this.getCoordinates.bind(this);
@@ -75,19 +78,13 @@ export default class locate extends Component {
 }
 
     getChargePoints() {
-        const url = 'https://0.0.0.0:8443/chargepoints';
-        const options = {
-            method: 'GET'
-            //headers: {
-            //    'Accept': 'application/json',
-            //    'Content-Type': 'application/json;charset=UTF-8'
-            //}
-        };
-        fetch(url, options)
-            .then(response => {
-                console.log(response.status);
-            })
-            .catch(error => console.error(error));
+        this.setState({
+            charge_locations: [{ "latitude": "-38.027640", "longitude": "145.212350" },
+                { "latitude": "-38.025860", "longitude": "145.203860" },
+                { "latitude": "-38.0098923", "longitude": "145.1060457" },
+                { "latitude": "-37.8632748", "longitude": "145.3528256" }
+            ]
+        })
     }
 
     render() {
@@ -96,24 +93,24 @@ export default class locate extends Component {
                 <h1>Testing2</h1>
                 <button onClick={this.getLocation}>Get coordinates</button>
                 {   
-                    this.state.latitude && this.state.longitude ?
+                    this.state.latitude && this.state.longitude && this.state.charge_locations ?
                         
                             <GoogleMapReact
                             bootstrapURLKeys={{ key: this.state.google_api_key }}
                             defaultZoom={this.props.zoom}
                             defaultCenter={this.props.center}
                                 
-                            >
+                        >
+                            {this.state.charge_locations.map(location => 
                                 <AnyReactComponent
-                                    lat={this.state.latitude}
-                                    lng={this.state.longitude}                                    
+                                    lat={location.latitude}
+                                    lng={location.longitude}
                                     text="My Marker"
-                            />
-                            <AnyReactComponent
-                                lat={-38.0856594}
-                                lng={145.351561}
-                                text="My Marker"
-                            />
+                                />
+                            )}
+
+                            
+                                
                             </GoogleMapReact>
                         
                         : 
