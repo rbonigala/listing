@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import { CarerPetData } from './components/CarerPetData';
+import  locate  from './routes/locate/Index';
 
 import './custom.css'
 
@@ -10,8 +10,8 @@ export default class App extends Component {
 
   render () {
     return (
-      <Layout>        
-        <Route path='/' component={CarerPetData} />
+      <Layout> 
+            <Route path='/map' component={locate}/>
       </Layout>
     );
   }
