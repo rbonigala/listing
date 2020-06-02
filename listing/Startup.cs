@@ -51,7 +51,7 @@ namespace listing
             }
             
             
-            
+          
             
             app.UseStaticFiles();
             app.UseSpaStaticFiles();

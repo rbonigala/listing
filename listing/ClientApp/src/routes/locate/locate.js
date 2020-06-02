@@ -39,6 +39,7 @@ export default class locate extends Component {
         this.getCoordinates = this.getCoordinates.bind(this);
         this.handleLocationError = this.handleLocationError.bind(this);
         this.getChargePoints = this.getChargePoints.bind(this);
+        this.createMapOptions = this.createMapOptions.bind(this);
         this.getLocation();
     }
 
@@ -92,18 +93,23 @@ export default class locate extends Component {
         })
     }
 
+    createMapOptions() {
+        return {
+            gestureHandling: 'greedy'
+        }
+    }
+
     render() {
         return (
             <div style={{ height: '100vh', width: '100%' }}>
-                <h1>Charging Stations near you</h1>
                 {
                     this.state.latitude && this.state.longitude && this.state.charge_locations ?
 
                         <GoogleMapReact
                             bootstrapURLKeys={{ key: this.state.google_api_key }}
                             defaultZoom={this.props.zoom}
-                            defaultCenter={{lat: this.state.latitude, lng:this.state.longitude}}
-
+                            defaultCenter={{ lat: this.state.latitude, lng: this.state.longitude }}
+                            options={this.createMapOptions}
                         >
                             {this.state.charge_locations.map(location =>
                                 <Marker lat={location.latitude} lng={location.longitude} />)}

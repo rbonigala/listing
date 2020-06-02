@@ -40,7 +40,8 @@ namespace listing
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    Log.Information("Server Started");
+                    Log.Information("Server Started ");
+                    
                 });
     }
 }
